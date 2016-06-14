@@ -3,7 +3,9 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
-
+	sorted_bw_array = base_word.chars.sort
+	sorted_mut_array = mutation.chars.sort
+	sorted_bw_array & sorted_mut_array == sorted_mut_array
 end
 
 # Driver code - don't touch anything below this line.
@@ -16,7 +18,7 @@ puts "Your method returned:"
 puts result
 puts
 
-if result == true
+if result
   puts "PASS!"
 else
   puts "F"
